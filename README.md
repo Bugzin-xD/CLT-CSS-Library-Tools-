@@ -285,6 +285,22 @@ Here is a ready-to-use HTML template containing the basic structure to start dev
 
 ---
 
+# To use
+
+* **Install in the website/Github**
+* **Use with link**
+  
+# Links
+* **clt.min.css**: *clt-iota.vercel.app/clt.min.css*
+* **clt-dark-minimalist.css**: *clt-iota.vercel.app/clt-dark-minimalit.css*
+
+---
+
+# Download
+* **Website**: *clt-iota.vercel.app*
+* **Github**: The zip archive
+
+---
 
 # Philosophy
 
