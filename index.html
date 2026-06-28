@@ -48,21 +48,49 @@
 
                 <pre class="clt-code"><code id="base-template-code">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;meta charset="utf-8"&gt;
-        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-        &lt;title&gt;Document&lt;/title&gt;
-        &lt;meta name="description" content="Your description"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-        &lt;link rel="stylesheet" href="clt-dark-minimalist.css"&gt; &lt;!-- Needed theme --&gt;
-        &lt;link rel="stylesheet" href="clt.min.css"&gt; &lt;!-- Min configs to CLT work --&gt;
-        &lt;script src="clt-functions.js"&gt;&lt;/script&gt; &lt;!-- Optional JavaScript to tag's and CLT atribuitions --&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1 class="clt-title"&gt;Your content here!&lt;/h1&gt;
-        &lt;p class="clt-p clt-center no-select"&gt;I like use CLT!❤&lt;/p&gt;
-    &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;CLT Project Template&lt;/title&gt;
+    
+    &lt;!-- CLT CSS Stylesheets --&gt;
+    &lt;link rel="stylesheet" href="clt-dark-minimalist.css"&gt;
+    &lt;link rel="stylesheet" href="clt.min.css"&gt;
+&lt;/head&gt;
+&lt;body class="clt-animation-scroll"&gt;
+
+    &lt;!-- Navbar --&gt;
+    &lt;nav class="clt-navbar"&gt;
+        &lt;h1 class="clt-title"&gt;My App&lt;/h1&gt;
+    &lt;/nav&gt;
+
+    &lt;!-- Main Container --&gt;
+    &lt;div class="clt-container clt-flex-center"&gt;
+        &lt;main class="clt-main"&gt;
+            &lt;div class="clt-card"&gt;
+                &lt;h2 class="clt-card-title"&gt;Welcome to CLT&lt;/h2&gt;
+                &lt;p class="clt-card-text"&gt;Start building your clean interface here.&lt;/p&gt;
+                
+                &lt;!-- Smart Form Example --&gt;
+                &lt;input clt="Email Address"&gt;
+                &lt;input type="password" clt="Password" reveal&gt;
+                
+                &lt;button class="clt-card-button"&gt;Get Started&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;footer class="clt-footer"&gt;
+        &lt;p class="clt-footer-text"&gt;© 2026 My Project&lt;/p&gt;
+        &lt;p class="clt-footer-right"&gt;Powered by CLT&lt;/p&gt;
+    &lt;/footer&gt;
+
+    &lt;!-- CLT JavaScript Functions --&gt;
+    &lt;script src="clt-functions.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
                 <button class="clt-card-button" clt-copy="base-template-code">
                     Copy template
