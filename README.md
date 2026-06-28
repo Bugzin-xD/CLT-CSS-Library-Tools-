@@ -19,29 +19,45 @@ The library combines modern CSS, lightweight JavaScript, and native browser feat
 * **Theme System:** Fully powered by CSS Variables.
 * **Component-Driven:** Ready-to-use structural and UI elements.
 * **Smart JS Helpers:** Native script automation without boilerplate.
-* **Automatic Floating Labels:** Handled automatically via attributes.
+* **Automatic Floating Labels:** Generated automatically using the `clt` attribute.
 * **Password Reveal:** Built-in toggle functionality for password inputs.
-* **Button States:** Dedicated attributes for active, disabled, and loading states.
-* **Automatic Alerts:** Custom alert elements ready out of the box.
-* **Utility Helpers:** Fast setup for Copy to Clipboard and File Downloads.
-* **Responsive Layouts:** Flexible grid and container systems.
-* **Aesthetics:** Custom scrollbars and scroll-reveal animations.
-* **Performance:** Zero external dependencies.
+* **Button States:** Supports active, disabled, and loading states.
+* **Automatic Alerts:** Custom `<clt-alert>` elements ready to use.
+* **Utility Helpers:** Built-in Copy to Clipboard and File Download helpers.
+* **Responsive Layouts:** Flexible containers and structural components.
+* **Custom Scrollbar:** Styled scrollbars with a minimalist design.
+* **Scroll Reveal Animation:** Animate elements as they enter the viewport.
+* **Zero Dependencies:** Built entirely with native HTML, CSS and JavaScript.
 
 ---
 
 # Installation
 
-Include the required files in the `<head>` and at the end of the `<body>` of your project:
+## Local Installation
+
+Include the required files inside your project.
 
 ```html
-<!-- Inside <head> -->
 <link rel="stylesheet" href="clt-dark-minimalist.css">
 <link rel="stylesheet" href="clt.min.css">
 
-<!-- Before </body> closes -->
 <script src="clt-functions.js"></script>
 ```
+
+---
+
+## Public Usage (CDN)
+
+You can also use CLT directly from the hosted version without downloading any files.
+
+```html
+<link rel="stylesheet" href="https://clt-iota.vercel.app/clt-dark-minimalist.css">
+<link rel="stylesheet" href="https://clt-iota.vercel.app/clt.min.css">
+
+<script src="https://clt-iota.vercel.app/clt-functions.js"></script>
+```
+
+This is the recommended option for quick prototypes and small projects.
 
 ---
 
@@ -51,9 +67,17 @@ Include the required files in the `<head>` and at the end of the `<body>` of you
 
 ```html
 <div class="clt-card">
-    <h2 class="clt-card-title">Card Title</h2>
-    <p class="clt-card-text">Card text.</p>
-    <button class="clt-card-button">Button</button>
+    <h2 class="clt-card-title">
+        Card Title
+    </h2>
+
+    <p class="clt-card-text">
+        Card text.
+    </p>
+
+    <button class="clt-card-button">
+        Button
+    </button>
 </div>
 ```
 
@@ -62,18 +86,27 @@ Include the required files in the `<head>` and at the end of the `<body>` of you
 ## Typography & Links
 
 ### Title
+
 ```html
-<h1 class="clt-title">Hello World</h1>
+<h1 class="clt-title">
+    Hello World
+</h1>
 ```
 
 ### Paragraph
+
 ```html
-<p class="clt-p">Paragraph.</p>
+<p class="clt-p">
+    Paragraph.
+</p>
 ```
 
 ### Link
+
 ```html
-<a class="clt-link">Link</a>
+<a href="#" class="clt-link">
+    Link
+</a>
 ```
 
 ---
@@ -81,60 +114,92 @@ Include the required files in the `<head>` and at the end of the `<body>` of you
 ## Inputs & Forms
 
 ### Smart Input
-Simply use the `clt` attribute to automatically generate a Floating Label, Input Group, Responsive layout, and Placeholder:
+
+Simply use the `clt` attribute.
 
 ```html
 <input clt="Name">
 ```
 
+CLT automatically generates:
+
+* Floating Label
+* Input Group
+* Placeholder
+* Responsive layout
+
 ### Password Reveal
-Automatically creates a show/hide password control by adding the `reveal` attribute:
 
 ```html
-<input type="password" clt="Password" reveal>
+<input
+type="password"
+clt="Password"
+reveal>
 ```
+
+Adding the `reveal` attribute automatically creates a show/hide password control.
 
 ---
 
 ## Buttons & States
 
 ### Default
+
 ```html
-<button class="clt-card-button">Button</button>
+<button class="clt-card-button">
+    Button
+</button>
 ```
 
 ### Active
+
 ```html
-<button class="clt-card-button" clt="on">Button</button>
+<button class="clt-card-button" clt="on">
+    Button
+</button>
 ```
 
 ### Disabled
+
 ```html
-<button class="clt-card-button" clt="off">Button</button>
+<button class="clt-card-button" clt="off">
+    Button
+</button>
 ```
 
 ### Loading
-```html
-<button class="clt-card-button" clt="loading">Loading...</button>
-```
 
+```html
+<button class="clt-card-button" clt="loading">
+    Loading...
+</button>
+```
 ---
 
 ## Alerts
 
 ### Default
+
 ```html
-<clt-alert>Message</clt-alert>
+<clt-alert>
+    Message
+</clt-alert>
 ```
 
 ### Warning
+
 ```html
-<clt-alert type="warn">Message</clt-alert>
+<clt-alert type="warn">
+    Message
+</clt-alert>
 ```
 
 ### Danger
+
 ```html
-<clt-alert type="alert">Message</clt-alert>
+<clt-alert type="alert">
+    Message
+</clt-alert>
 ```
 
 ---
@@ -147,94 +212,164 @@ Automatically creates a show/hide password control by adding the `reveal` attrib
 
 ---
 
-## JavaScript Helpers
+# JavaScript Helpers
 
-### Copy to Clipboard
-Easily copy the text contents of any element by referencing its ID:
+CLT provides built-in JavaScript helpers to reduce repetitive code while keeping your HTML clean.
+
+---
+
+## Copy to Clipboard
+
+Copy the text content of any element using its ID.
 
 ```html
-<pre id="example-code">Hello World</pre>
+<pre id="example-code">
+Hello World
+</pre>
 
-<button class="clt-card-button" clt-copy="example-code">Copy</button>
+<button
+class="clt-card-button"
+clt-copy="example-code">
+    Copy
+</button>
 ```
 
-### Download Helper
-Trigger local file downloads instantly:
+When clicked, CLT automatically copies the element content to the user's clipboard.
+
+---
+
+## File Download
+
+Trigger downloads without writing JavaScript.
 
 ```html
-<button class="clt-card-button" clt-download="clt-v1.0.zip">Download</button>
+<button
+class="clt-card-button"
+clt-download="clt-v1.0.zip">
+    Download
+</button>
 ```
 
-You can also specify a custom download name:
+Custom filename:
 
 ```html
-<button class="clt-card-button" clt-download="downloads/library.zip" download-name="CLT.zip">Download</button>
+<button
+class="clt-card-button"
+clt-download="downloads/library.zip"
+download-name="CLT.zip">
+    Download
+</button>
 ```
 
 ---
 
-## Layout & Structure
+# Layout Components
 
-### Navigation & Headers
+## Header
+
 ```html
 <header class="clt-header"></header>
+```
+
+---
+
+## Navbar
+
+```html
 <nav class="clt-navbar"></nav>
 ```
 
-### Main Structure
+---
+
+## Main
+
 ```html
 <main class="clt-main"></main>
+```
+
+---
+
+## Section
+
+```html
 <section class="clt-section"></section>
+```
+
+---
+
+## Container
+
+```html
 <div class="clt-container"></div>
 ```
 
-### Centering Elements
+---
+
+## Center
+
 ```html
 <div class="clt-center"></div>
-<!-- or -->
+```
+
+or
+
+```html
 <div class="clt-flex-center"></div>
 ```
 
-### Footer
+---
+
+## Footer
+
 ```html
 <footer class="clt-footer">
-    <p class="clt-footer-text">Footer</p>
-    <p class="clt-footer-right">Loaden TI</p>
+    <p class="clt-footer-text">
+        Footer
+    </p>
+
+    <p class="clt-footer-right">
+        Loaden TI
+    </p>
 </footer>
 ```
 
 ---
 
-## Scroll Animation
+# Scroll Animation
 
-Apply the class to the `<body>` tag, and every direct child element will smoothly animate when entering the viewport:
+Apply the class to the `<body>` element.
 
 ```html
 <body class="clt-animation-scroll">
 ```
 
+Every direct child element will smoothly animate when entering the viewport.
+
 ---
 
 # Customization
 
-CLT is entirely powered by CSS Variables. You can override any variable inside your own `:root` file without touching the core library files.
+CLT is entirely powered by CSS Variables.
+
+You can override any variable inside your own `:root` without modifying the library source files.
 
 Example:
 
 ```css
-:root {
-    --clt-surface: #202020;
-    --clt-text: #ffffff;
-    --clt-border-color: #00aaff;
+:root{
+    --clt-surface:#202020;
+    --clt-text:#ffffff;
+    --clt-border-color:#00aaff;
 }
 ```
 
+This allows complete theme customization while keeping future updates simple.
 
 ---
 
 # Boilerplate
 
-Here is a ready-to-use HTML template containing the basic structure to start developing with CLT instantly:
+A ready-to-use HTML template for starting new projects with CLT.
 
 ```html
 <!DOCTYPE html>
@@ -242,79 +377,102 @@ Here is a ready-to-use HTML template containing the basic structure to start dev
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLT Project Template</title>
-    
-    <!-- CLT CSS Stylesheets -->
+    <title>CLT Project</title>
+
     <link rel="stylesheet" href="clt-dark-minimalist.css">
     <link rel="stylesheet" href="clt.min.css">
 </head>
+
 <body class="clt-animation-scroll">
 
-    <!-- Navbar -->
     <nav class="clt-navbar">
         <h1 class="clt-title">My App</h1>
     </nav>
 
-    <!-- Main Container -->
-    <div class="clt-container clt-flex-center">
-        <main class="clt-main">
-            <div class="clt-card">
-                <h2 class="clt-card-title">Welcome to CLT</h2>
-                <p class="clt-card-text">Start building your clean interface here.</p>
-                
-                <!-- Smart Form Example -->
-                <input clt="Email Address">
-                <input type="password" clt="Password" reveal>
-                
-                <button class="clt-card-button">Get Started</button>
-            </div>
-        </main>
-    </div>
+    <main class="clt-main">
 
-    <!-- Footer -->
+        <div class="clt-container clt-flex-center">
+
+            <div class="clt-card">
+
+                <h2 class="clt-card-title">
+                    Welcome
+                </h2>
+
+                <p class="clt-card-text">
+                    Start building your interface.
+                </p>
+
+                <input clt="Email">
+
+                <input
+                type="password"
+                clt="Password"
+                reveal>
+
+                <button class="clt-card-button">
+                    Get Started
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
     <footer class="clt-footer">
-        <p class="clt-footer-text">© 2026 My Project</p>
-        <p class="clt-footer-right">Powered by CLT</p>
+        <p class="clt-footer-text">
+            © 2026 My Project
+        </p>
+
+        <p class="clt-footer-right">
+            Powered by CLT
+        </p>
     </footer>
 
-    <!-- CLT JavaScript Functions -->
     <script src="clt-functions.js"></script>
+
 </body>
 </html>
 ```
 
 ---
 
-# To use
+# Download
 
-* **Install in the website/Github**
-* **Use with link**
-  
-# Links
-* **clt.min.css**: *clt-iota.vercel.app/clt.min.css*
-* **clt-dark-minimalist.css**: *clt-iota.vercel.app/clt-dark-minimalit.css*
+## Website
+
+```
+https://clt-iota.vercel.app
+```
 
 ---
 
-# Download
-* **Website**: *clt-iota.vercel.app*
-* **Github**: The zip archive
+## GitHub Repository
+
+```
+https://github.com/Bugzin-xD/CLT-CSS-Library-Tools-
+```
 
 ---
 
 # Philosophy
 
-CLT follows four core principles:
-* **Simplicity:** Keep it clean, lightweight, and easy to understand.
-* **Performance:** High-speed rendering with native tech and zero dependencies.
-* **Native Integration:** Works with your workflow, not against it.
-* **Customization:** Full control over themes via CSS Variables.
+CLT follows four core principles.
+
+* **Simplicity** — Clean, lightweight and easy to understand.
+* **Performance** — Native rendering with zero dependencies.
+* **Native Integration** — Works with HTML instead of replacing it.
+* **Customization** — Everything is customizable through CSS Variables.
+
+CLT was designed to help developers build interfaces faster without hiding how HTML, CSS and JavaScript work.
 
 ---
 
 # Browser Support
 
-Recommended and tested modern browsers:
+Recommended browsers:
+
 * Google Chrome
 * Microsoft Edge
 * Mozilla Firefox
@@ -325,4 +483,6 @@ Recommended and tested modern browsers:
 
 # License
 
-Copyright © Loaden TI. All rights reserved.
+Copyright © Loaden TI.
+
+All rights reserved.
