@@ -291,14 +291,14 @@ Here is a ready-to-use HTML template containing the basic structure to start dev
 * **Use with link**
   
 # Links
-* ```**clt.min.css**: *clt-iota.vercel.app/clt.min.css*```
-* ```**clt-dark-minimalist.css**: *clt-iota.vercel.app/clt-dark-minimalit.css*```
+* **clt.min.css**: *clt-iota.vercel.app/clt.min.css*
+* **clt-dark-minimalist.css**: *clt-iota.vercel.app/clt-dark-minimalit.css*
 
 ---
 
 # Download
-* ```**Website**: *clt-iota.vercel.app*```
-* ```**Github**: The zip archive```
+* **Website**: *clt-iota.vercel.app*
+* **Github**: The zip archive
 
 ---
 
